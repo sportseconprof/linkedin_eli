@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "source": "https://economics.byu.edu/faculty",
+    "lastUpdated": "2025"
+  },
+  "faculty": [
+    {"name": "Scott C. Bradford", "title": "Associate Professor", "areas": ["International Trade", "Migration", "Political Economy", "Japanese Economy"]},
+    {"name": "Matthew J. Butler", "title": "Adjunct Professor", "areas": ["Health Economics", "Labor Economics", "Risk and Insurance"]},
+    {"name": "James H. Cardon", "title": "Professor", "areas": ["Health Economics", "Industrial Organization"]},
+    {"name": "Scott S. Condie", "title": "Associate Professor", "areas": ["Financial Economics", "Economic Theory"]},
+    {"name": "Tanner Eastmond", "title": "Visiting Assistant Professor", "areas": ["Labor Economics", "Applied Microeconomics"]},
+    {"name": "Eric R. Eide", "title": "Professor", "areas": ["Economics of Education", "Health Economics", "Labor Economics"]},
+    {"name": "Brigham R. Frandsen", "title": "Professor", "areas": ["Econometrics", "Labor Economics"]},
+    {"name": "James R. Kearl", "title": "A. O. Smoot Professor of Economics", "areas": ["Law and Economics", "Applied Microeconomics"]},
+    {"name": "Taylor Landon", "title": "Assistant Professor", "areas": []},
+    {"name": "Lars J. Lefgren", "title": "Department Chair, Professor", "areas": ["Labor Economics", "Empirical Economics"]},
+    {"name": "Emily C. Leslie", "title": "Assistant Professor", "areas": ["Applied Microeconomics", "Public Economics", "Law and Economics"]},
+    {"name": "Eric Lewis", "title": "Assistant Professor", "areas": ["Energy Economics", "Environmental Economics", "Industrial Organization"]},
+    {"name": "Joseph C. McMurray", "title": "Associate Professor", "areas": ["Political Economics", "Microeconomic Theory"]},
+    {"name": "Gwyneth Miner", "title": "Assistant Professor", "areas": []},
+    {"name": "Richard Patterson", "title": "Associate Professor", "areas": ["Applied Microeconomics", "Behavioral Economics", "Economics of Education", "Labor Economics"]},
+    {"name": "Brennan C. Platt", "title": "Professor", "areas": ["Search Theory", "Auction Theory", "Mechanism Design", "Game Theory"]},
+    {"name": "C. Arden Pope III", "title": "Mary Lou Fulton Professor of Economics", "areas": ["Environmental Economics", "Environmental Epidemiology"]},
+    {"name": "Jaren C. Pope", "title": "Professor", "areas": ["Environmental Economics", "Urban Economics"]},
+    {"name": "Joseph P. Price", "title": "Professor", "areas": ["Family Economics", "Economics of Education", "Behavioral Economics", "Health Economics"]},
+    {"name": "Joshua Price", "title": "Visiting Associate Professor", "areas": ["Economics of Education", "Sports Economics", "Behavioral Economics"]},
+    {"name": "Mark H. Showalter", "title": "Professor", "areas": ["Health Economics", "Economics of Education"]},
+    {"name": "David P. Sims", "title": "Professor", "areas": ["Labor Economics", "Economics of Education", "Public Finance"]},
+    {"name": "Olga B. Stoddard", "title": "Associate Professor", "areas": ["Experimental Economics", "Behavioral Economics", "Development Economics"]},
+    {"name": "Christian vom Lehn", "title": "Associate Professor", "areas": ["Macroeconomics", "Labor Economics"]},
+    {"name": "Steven M. Waters", "title": "Adjunct Professor", "areas": ["Intellectual Property", "Antitrust", "Environmental Economics", "Econometrics", "Applied Microeconomics"]},
+    {"name": "Riley E. Wilson", "title": "Associate Professor", "areas": ["Public Economics", "Labor Economics", "Applied Microeconomics"]},
+    {"name": "Anthony Yim", "title": "Visiting Assistant Professor", "areas": ["Labor Economics", "Applied Econometrics", "Economics of Education", "Public Economics"]}
+  ],
+  "staff": [
+    {"name": "Andrea Sneed", "role": "Department Manager"},
+    {"name": "Maci Jackson", "role": "Internship and Alumni Coordinator"}
+  ],
+  "researchAreasSummary": {
+    "Labor Economics": ["Brigham Frandsen", "Lars Lefgren", "Eric Eide", "David Sims", "Riley Wilson", "Christian vom Lehn", "Tanner Eastmond", "Anthony Yim", "Richard Patterson"],
+    "Health Economics": ["James Cardon", "Eric Eide", "Mark Showalter", "Joseph Price", "Matthew Butler"],
+    "Economics of Education": ["Eric Eide", "David Sims", "Joseph Price", "Joshua Price", "Richard Patterson", "Mark Showalter", "Anthony Yim"],
+    "Environmental Economics": ["Arden Pope", "Jaren Pope", "Eric Lewis", "Steven Waters"],
+    "Behavioral Economics": ["Richard Patterson", "Olga Stoddard", "Joseph Price", "Joshua Price"],
+    "Applied Microeconomics": ["Emily Leslie", "Riley Wilson", "James Kearl", "Tanner Eastmond", "Steven Waters", "Richard Patterson"],
+    "Public Economics": ["Emily Leslie", "Riley Wilson", "Anthony Yim"],
+    "Law and Economics": ["James Kearl", "Emily Leslie"],
+    "Econometrics": ["Brigham Frandsen", "Steven Waters", "Anthony Yim"],
+    "Macroeconomics": ["Christian vom Lehn"],
+    "International Trade": ["Scott Bradford"],
+    "Game Theory": ["Brennan Platt"],
+    "Financial Economics": ["Scott Condie"],
+    "Development Economics": ["Olga Stoddard"],
+    "Industrial Organization": ["James Cardon", "Eric Lewis"]
+  }
+}

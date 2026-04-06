@@ -1,0 +1,216 @@
+{
+  "department": {
+    "name": "Department of Economics",
+    "college": "College of Family, Home, and Social Sciences",
+    "university": "Brigham Young University",
+    "location": "2146 West View Building, Provo, UT 84602",
+    "phone": "(801) 422-2859",
+    "email": "economics@byu.edu",
+    "website": "https://economics.byu.edu",
+    "socialMedia": {
+      "linkedin": "BYU Economics",
+      "twitter": "@byueconomics",
+      "instagram": "@byueconomics",
+      "youtube": "BYU Economics"
+    }
+  },
+  "academicRequirements": {
+    "gradeRequirements": "Economics majors must earn C- or higher in MATH 112 and ECON 110, 378, 380, 381, 382, & 388 with passing grades in other economics courses",
+    "minorRequirements": "Minors need C- or higher in MATH 112, ECON 110, 380, & 381",
+    "recommendedCourseLoad": "No more than 3 economics courses per semester; 2 courses recommended",
+    "challengeExams": "The department does not offer challenge exams for any economics courses",
+    "mathSubstitutions": "Approval for transferring or substituting calculus courses requires going through the Department of Mathematics (801-422-2061)"
+  },
+  "academicAdvising": {
+    "advisor": "Megan Hancock",
+    "location": "Liberal Arts Advisement Center, 1049 JFSB",
+    "phone": "(801) 422-3541",
+    "declaringMajor": "Visit the Liberal Arts Advisement Center to declare the economics major"
+  },
+  "careerResources": {
+    "careerServices": {
+      "director": "Amanda Peterson",
+      "location": "2590 WSC",
+      "phone": "(801) 422-3000",
+      "website": "careers.byu.edu",
+      "services": [
+        "Career counseling and advising",
+        "Resume and cover letter review",
+        "Interview preparation",
+        "Job search strategies",
+        "Networking guidance"
+      ]
+    },
+    "handshake": {
+      "description": "BYU's Career Services Management platform for internships, jobs, and info-sessions",
+      "features": [
+        "RSVP for info-sessions and recruiting events",
+        "View company profiles",
+        "Send and receive messages with recruiters",
+        "Apply for jobs and internships"
+      ],
+      "access": "Use your BYU NetID and password"
+    },
+    "weeklyEmails": "Department sends weekly email blasts advertising internships, research positions, jobs, and events to economics majors. Email economics@byu.edu to join.",
+    "careerPrepSeminar": "Required seminar helping students explore career paths, develop professional skills, and prepare for job search"
+  },
+  "internships": {
+    "overview": "The Economics Department strongly encourages all undergraduate majors to participate in an internship or research experience",
+    "coordinator": {
+      "email": "econ-internships@byu.edu",
+      "phone": "(801) 422-2859"
+    },
+    "resources": [
+      "Finding An Internship guide",
+      "Preparing for an Internship resources",
+      "Funding Your Internship information",
+      "Getting Credit guidelines",
+      "Historical Internships List showing past placements"
+    ],
+    "creditPolicy": "ECON 199R credit allowed only if provider requires it, for international visa requirements, or if funding sources mandate it. Maximum 0.5 credit hours.",
+    "internshipGrant": {
+      "eligibility": [
+        "Must be a declared economics major",
+        "Must have completed three economics courses by internship start",
+        "Must have secured or be applying for an internship supporting academic/career goals",
+        "Cannot have received another department grant/scholarship for same semester"
+      ],
+      "funding": "Funded by BYU Economics alumni; award amounts consider internship compensation, location, and duration",
+      "deadlines": {
+        "springSummer": "March 20th",
+        "fall": "July 15th",
+        "winter": "November 30th"
+      },
+      "application": "Submit to economics@byu.edu or deliver to WVB 2146"
+    },
+    "fhssGrant": "Economics majors may also apply for the FHSS Internship Grant through a separate application",
+    "currentOpportunities": [
+      {
+        "company": "Business Council for Sustainable Energy",
+        "role": "Policy Fellowship",
+        "location": "Washington, DC",
+        "details": "Part-time, 6-8 weeks, stipend provided"
+      },
+      {
+        "company": "CIA",
+        "role": "STEM/Arts Internship",
+        "location": "Washington, DC",
+        "details": "Must be U.S. citizen, willing to relocate"
+      },
+      {
+        "company": "American Enterprise Institute",
+        "role": "Economic Policy Internship",
+        "location": "Washington, DC",
+        "details": "Minimum 3.0 GPA required"
+      },
+      {
+        "company": "JP Morgan Chase",
+        "role": "Global Private Bank Advisor Program",
+        "location": "50+ U.S. locations",
+        "details": "9-week program"
+      }
+    ],
+    "onCampusOptions": [
+      "On-Campus Internships through Marriott School (3-credit, fall/winter)",
+      "Social Impact Projects through Ballard Center",
+      "Washington Seminar - internships in DC (congressional, non-profit, data science, economics)"
+    ]
+  },
+  "studentOrganizations": {
+    "economicsStudentAssociation": {
+      "name": "Economics Student Association (ESA)",
+      "description": "Student-run organization providing professional development, networking, and social activities",
+      "activities": [
+        "Industry speaker series",
+        "Company visits and tours",
+        "Networking events with alumni and professionals",
+        "Graduate school preparation workshops",
+        "Social events",
+        "Peer mentoring",
+        "STATA Training Manual resource"
+      ],
+      "joining": "Visit the ESA webpage on economics.byu.edu"
+    },
+    "womenInEcon": {
+      "name": "Women in Econ",
+      "contact": "byuwomeninecon@gmail.com",
+      "note": "Must join ESA first"
+    }
+  },
+  "researchOpportunities": {
+    "departmentJobs": "Check Department Student Jobs page for available RA and TA positions",
+    "recordLinkingLab": "BYU Record Linking Lab employs 20 undergraduate research assistants collaborating with FamilySearch",
+    "visitingScholars": "Visiting Scholar Series offers presentation events for students and faculty",
+    "facultyResearch": "Research assistant opportunities available with faculty members"
+  },
+  "graduateSchoolPrep": {
+    "resources": [
+      "Grad School Guide resource",
+      "Faculty mentorship for graduate school applications",
+      "Research assistant experience opportunities",
+      "Honors thesis program",
+      "GRE/GMAT preparation guidance"
+    ],
+    "commonPaths": [
+      "PhD in Economics",
+      "MBA programs",
+      "JD (Law) programs",
+      "Master's in Public Policy (MPP)",
+      "Master's in Data Science",
+      "Pre-doctoral research positions"
+    ]
+  },
+  "technologyAndSoftware": {
+    "computers": "Department has no special computer requirements",
+    "stata": {
+      "labAccess": "Available on lab computers",
+      "cloudAccess": "Free online access through cloudapps.byu.edu",
+      "purchase": "Discounted student licenses at stata.com",
+      "training": "ESA provides STATA Training Manual"
+    }
+  },
+  "academicSupport": {
+    "tutoring": "Tutoring services available for economics courses",
+    "writingSupport": [
+      "FHSS Writing Lab",
+      "Research & Writing Center"
+    ],
+    "resourceGuides": [
+      "Economics Websites and Data Sources",
+      "Library Resources and E-Journals"
+    ],
+    "labSessions": "Lab and recitation sessions for 100, 300, and 400-500 level courses"
+  },
+  "scholarshipsAndGrants": {
+    "available": [
+      "Department scholarships",
+      "Internship grants",
+      "Experiential learning grants"
+    ],
+    "requirements": "Official transcripts (paper or electronic) required for most applications; TA applications need only academic summary"
+  },
+  "notableFaculty": [
+    {"name": "Mark Showalter", "specialty": "Health economics, city analysis"},
+    {"name": "Scott Bradford", "specialty": "Trade policy, international economics"},
+    {"name": "Arden Pope", "specialty": "Environmental economics, health impacts"},
+    {"name": "Jaren Pope", "specialty": "Behavioral economics, consumer behavior"},
+    {"name": "Jennifer Doleac", "specialty": "Crime economics, policy analysis"},
+    {"name": "Michael Ransom", "specialty": "Labor economics, transportation"},
+    {"name": "Brennan Platt", "specialty": "Family economics"}
+  ],
+  "studentAchievements": [
+    "Carson Lund and James Hinkson selected as E*Trade analysts (26 positions from 1,000+ applicants)",
+    "Trevor Woolley and Alex Hoagland published in Contemporary Economic Policy on vehicle safety inspections"
+  ],
+  "skillsDeveloped": [
+    "Economic theory and analysis",
+    "Econometrics and statistical methods",
+    "Data analysis (Stata, R, Python)",
+    "Critical thinking and problem-solving",
+    "Written and oral communication",
+    "Financial modeling",
+    "Research methodology",
+    "Quantitative reasoning",
+    "Policy analysis"
+  ]
+}

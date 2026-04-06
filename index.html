@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BYU Economics Career Explorer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-byu">BYU</span>
+        <span class="logo-text">Economics Career Explorer</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-btn active" data-view="chat">AI Career Advisor</button>
+        <button class="nav-btn" data-view="explorer">Alumni Explorer</button>
+        <button class="nav-btn" data-view="tracks">Econ Tracks</button>
+        <button class="nav-btn" data-view="stats">Career Statistics</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Chat View -->
+    <section id="chat-view" class="view active">
+      <div class="chat-container">
+        <div class="chat-sidebar">
+          <h3>Suggested Questions</h3>
+          <div class="suggested-questions">
+            <button class="suggestion-btn">What jobs do BYU Economics majors get?</button>
+            <button class="suggestion-btn">Which companies hire the most BYU Economics graduates?</button>
+            <button class="suggestion-btn">Where do BYU Economics students usually end up living?</button>
+            <button class="suggestion-btn">How should I prepare for graduate school?</button>
+            <button class="suggestion-btn">How many graduates pursue further education, and where?</button>
+            <button class="suggestion-btn">Which graduate degrees are most popular for Economics alumni?</button>
+            <button class="suggestion-btn">If I start as a data analyst, where might I end up?</button>
+            <button class="suggestion-btn">What are the most common entry-level job titles for Economics majors?</button>
+          </div>
+        </div>
+        <div class="chat-main">
+          <div class="chat-messages" id="chat-messages">
+            <div class="message assistant">
+              <div class="message-content">
+                <p>Hi! I'm your BYU Economics Career Advisor. I have access to data on <strong>592 BYU economics graduates</strong>, including their career paths, companies, and industries.</p>
+                <p>I can also provide information about job market outlook from the Bureau of Labor Statistics and BYU's economics program resources.</p>
+                <p>What would you like to know about careers in economics?</p>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-container">
+            <form id="chat-form" class="chat-form">
+              <input
+                type="text"
+                id="chat-input"
+                class="chat-input"
+                placeholder="Ask about careers, industries, companies, or skills..."
+                autocomplete="off"
+              >
+              <button type="submit" class="chat-submit" id="chat-submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explorer View -->
+    <section id="explorer-view" class="view">
+      <div class="explorer-container">
+        <div class="explorer-filters">
+          <h3>Filter Graduates</h3>
+          <div class="filter-group">
+            <label for="industry-filter">First Job Industry</label>
+            <select id="industry-filter" class="filter-select">
+              <option value="">All Industries</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="company-filter">First Employer</label>
+            <select id="company-filter" class="filter-select">
+              <option value="">All Companies</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="location-filter">First Job Location</label>
+            <select id="location-filter" class="filter-select">
+              <option value="">All Locations</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="gradschool-filter">Graduate School</label>
+            <select id="gradschool-filter" class="filter-select">
+              <option value="">All (including none)</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="search-filter">Search Names or Companies</label>
+            <input type="text" id="search-filter" class="filter-input" placeholder="Search by name or company...">
+          </div>
+          <button class="clear-filters-btn" id="clear-filters">Clear All Filters</button>
+          <div class="filter-results">
+            <span id="filter-count">0</span> graduates found
+          </div>
+        </div>
+        <div class="explorer-results">
+          <div class="results-header">
+            <h3>First Jobs After Graduation</h3>
+            <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.25rem;">What BYU Economics graduates did right out of undergrad</p>
+          </div>
+          <div class="results-list" id="results-list">
+            <!-- Graduate cards will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Econ Tracks View -->
+    <section id="tracks-view" class="view">
+      <div class="tracks-container">
+        <div class="tracks-header">
+          <h2>What Can You Do with an Economics Degree?</h2>
+          <p>Economics offers versatile career opportunities, reflected in the diverse electives within the major. The Department has grouped electives into Econ Tracks, each aligning with specific career paths. Though these tracks don't appear on transcripts or diplomas, they can help guide your graduation plan.</p>
+          <p class="tracks-note">The tracks are grouped based on similar skills that you develop in the econ major that are used within those careers. Students are welcome to take any elective, even if it spans multiple tracks.</p>
+        </div>
+
+        <div class="tracks-grid">
+          <!-- Banking and Finance -->
+          <div class="track-card" data-track="Banking and Finance">
+            <div class="track-header">
+              <span class="track-icon">💰</span>
+              <h3>Banking and Finance</h3>
+            </div>
+            <div class="track-content">
+              <p>Prepares students for careers in financial services, corporate finance, and investment roles.</p>
+              <div class="track-section">
+                <h4>Common Roles</h4>
+                <ul>
+                  <li>Investment Banking Analyst</li>
+                  <li>Equity Research Analyst</li>
+                  <li>Financial Analyst (FP&amp;A)</li>
+                  <li>Acquisition Specialist</li>
+                  <li>Wealth Advisor</li>
+                  <li>Risk and Pricing Analyst</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Top Employers</h4>
+                <p>JPMorgan, Goldman Sachs, Bank of America, Nike, Adobe, American Airlines</p>
+              </div>
+              <div class="track-section">
+                <h4>Key Responsibilities</h4>
+                <ul>
+                  <li>Building financial models for investments, mergers, and acquisitions</li>
+                  <li>Analyzing market trends and company performance</li>
+                  <li>Preparing reports and presentations for clients</li>
+                  <li>Managing financial risk or portfolio strategy</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>ACC 201, ACC 202, FIN 201, IS 110, IS 201, ECON 450</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Finance Club for networking and hands-on experience</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>MFA, MBA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Economic Consulting -->
+          <div class="track-card" data-track="Economic Consulting">
+            <div class="track-header">
+              <span class="track-icon">📊</span>
+              <h3>Economic Consulting</h3>
+            </div>
+            <div class="track-content">
+              <p>Equips students with analytical and empirical tools for data-intensive roles at the intersection of economics, law, and public policy.</p>
+              <div class="track-section">
+                <h4>Common Roles</h4>
+                <ul>
+                  <li>Analyst</li>
+                  <li>Economic Consultant</li>
+                  <li>Research Associate</li>
+                  <li>Litigation Support Analyst</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Top Employers</h4>
+                <p>Analysis Group, Bates White, Cornerstone, Secretariat, NERA, Brookings Institution, American Enterprise Institute</p>
+              </div>
+              <div class="track-section">
+                <h4>Key Responsibilities</h4>
+                <ul>
+                  <li>Apply econometric and statistical techniques to analyze complex datasets</li>
+                  <li>Support expert witness testimony</li>
+                  <li>Estimate damages or market effects in litigation contexts</li>
+                  <li>Summarize findings in professional reports and memos</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>ECON 420, ECON 450, ECON 442, ECON 476, ECON 588</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Research assistant positions with faculty</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>PhD in Economics, MBA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Management Consulting -->
+          <div class="track-card" data-track="Management Consulting">
+            <div class="track-header">
+              <span class="track-icon">🎯</span>
+              <h3>Management Consulting</h3>
+            </div>
+            <div class="track-content">
+              <p>Prepares students to tackle complex business problems through data-driven analysis, strategic thinking, and effective communication.</p>
+              <div class="track-section">
+                <h4>Common Roles</h4>
+                <ul>
+                  <li>Associate Consultant</li>
+                  <li>Business Analyst</li>
+                  <li>Strategy Analyst</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Top Employers</h4>
+                <p>McKinsey, Bain, BCG, Deloitte, PwC, EY-Parthenon, KPMG, Cicero Group</p>
+              </div>
+              <div class="track-section">
+                <h4>Key Responsibilities</h4>
+                <ul>
+                  <li>Work in teams to solve client challenges</li>
+                  <li>Market entry, cost reduction, organizational design, growth strategy</li>
+                  <li>Collect and analyze data, identify trends</li>
+                  <li>Craft solutions and present findings via polished slide decks</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>ECON 442, ECON 450, Strategy Minor</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Management Consulting Association (MCA) for networking and case interview prep</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>MBA</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech and Data Analytics -->
+          <div class="track-card" data-track="Tech and Data Analytics">
+            <div class="track-header">
+              <span class="track-icon">💻</span>
+              <h3>Tech and Data Analytics</h3>
+            </div>
+            <div class="track-content">
+              <p>Equips students to apply economic reasoning and data science tools in technology-driven and analytical roles across industries.</p>
+              <div class="track-section">
+                <h4>Common Roles</h4>
+                <ul>
+                  <li>Data Analyst</li>
+                  <li>Business Analyst</li>
+                  <li>Product Analyst</li>
+                  <li>Data Scientist</li>
+                  <li>AI/Business Intelligence roles</li>
+                  <li>Operations Research</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Top Employers</h4>
+                <p>Google, Amazon, Meta, Apple, Qualtrics, Domo, Lucid</p>
+              </div>
+              <div class="track-section">
+                <h4>Key Responsibilities</h4>
+                <ul>
+                  <li>Use SQL, Python, R to clean and analyze data</li>
+                  <li>Build dashboards in Tableau or Power BI</li>
+                  <li>Conduct A/B tests to assess product features</li>
+                  <li>Identify data-driven solutions for efficiency</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>Upper division Math and Statistics, ECON 442, ECON 484, ECON 588</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Data Science Club</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>Business Analytics, Statistics, MBA, PhD</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Policy/Non-Profit -->
+          <div class="track-card" data-track="Policy/Non-Profit">
+            <div class="track-header">
+              <span class="track-icon">🏛️</span>
+              <h3>Policy/Non-Profit</h3>
+            </div>
+            <div class="track-content">
+              <p>Prepares students for impactful careers in public service, policy research, and international development.</p>
+              <div class="track-section">
+                <h4>Common Roles</h4>
+                <ul>
+                  <li>Policy Analyst</li>
+                  <li>Research Assistant (Federal Reserve, think tanks)</li>
+                  <li>Entry-level Economist (federal agencies)</li>
+                  <li>Program Analyst (nonprofits)</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Top Employers</h4>
+                <p>U.S. Departments (Commerce, Labor, Defense), World Bank, local municipalities, Church of Jesus Christ affiliates, other nonprofits</p>
+              </div>
+              <div class="track-section">
+                <h4>Key Responsibilities</h4>
+                <ul>
+                  <li>Analyze economic data to shape policy (labor, health, education, trade)</li>
+                  <li>Conduct cost-benefit evaluations of public programs</li>
+                  <li>Draft policy briefs</li>
+                  <li>Provide econometric support to research initiatives</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>ECON 440–475, POLI 200, POLI 203, POLI 331, Political Science or Urban and Regional Planning Minor</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Beyond BYU, Foreign Service Student Organization, Model UN</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>MPA, Master of Public Policy</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Healthcare -->
+          <div class="track-card" data-track="Healthcare">
+            <div class="track-header">
+              <span class="track-icon">🏥</span>
+              <h3>Healthcare</h3>
+            </div>
+            <div class="track-content">
+              <p>Designed for students interested in applying economic principles and analytical skills to healthcare—one of the world's most complex and impactful sectors.</p>
+              <div class="track-section">
+                <h4>Common Roles</h4>
+                <ul>
+                  <li>Healthcare Analyst</li>
+                  <li>Policy Analyst (health systems)</li>
+                  <li>Health Economics and Outcomes Research (HEOR) Analyst</li>
+                  <li>Pricing and Reimbursement Analyst</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Top Employers</h4>
+                <p>IQVIA, Optum, Avalere Health, Intermountain Healthcare, Kaiser Permanente, UnitedHealth Group</p>
+              </div>
+              <div class="track-section">
+                <h4>Key Responsibilities</h4>
+                <ul>
+                  <li>Evaluate healthcare policies</li>
+                  <li>Analyze reimbursement models</li>
+                  <li>Study patient outcomes</li>
+                  <li>Assess cost-effectiveness, pricing, and quality of healthcare delivery</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>ECON 465 (Health Economics), Healthcare Leadership Minor</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Healthcare Leadership Association</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>Healthcare Administration, Medical School, Dental School</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pre-PhD -->
+          <div class="track-card" data-track="Pre-PhD">
+            <div class="track-header">
+              <span class="track-icon">🎓</span>
+              <h3>Pre-PhD</h3>
+            </div>
+            <div class="track-content">
+              <p>Tailored for students considering doctoral study in economics, public policy, finance, or related quantitative fields.</p>
+              <div class="track-section">
+                <h4>Common Roles</h4>
+                <ul>
+                  <li>Predoctoral Research Assistant (Predoc)</li>
+                  <li>Research Analyst</li>
+                  <li>Research Assistant at academic institutions, think tanks, or Federal Reserve</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>What You'll Do</h4>
+                <ul>
+                  <li>Intensive, hands-on academic-style research</li>
+                  <li>Data cleaning and literature reviews</li>
+                  <li>Econometric analysis</li>
+                  <li>Replication or extension of existing studies</li>
+                </ul>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>ECON 580, ECON 581, ECON 582, ECON 588, Math Minor or Major</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Undergraduate research assistant positions with faculty</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>PhD in Economics, Public Policy, Finance, or Operations Research</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Law -->
+          <div class="track-card" data-track="Law">
+            <div class="track-header">
+              <span class="track-icon">⚖️</span>
+              <h3>Law</h3>
+            </div>
+            <div class="track-content">
+              <p>Supports students preparing for legal careers by emphasizing logical reasoning, critical thinking, and analytical writing skills rooted in economic reasoning.</p>
+              <div class="track-section">
+                <h4>Why Economics for Law?</h4>
+                <p>Economics majors are well-regarded by law schools for their rigorous training in logic, argumentation, and policy analysis. Success hinges on strong academic performance and a high LSAT score.</p>
+              </div>
+              <div class="track-section">
+                <h4>Recommended Courses</h4>
+                <p>ECON 442 (Behavioral Economics), ECON 476 (Law and Economics), ECON 478 (Antitrust and Regulation)</p>
+              </div>
+              <div class="track-section">
+                <h4>Get Involved</h4>
+                <p>Seek undergraduate research or internships exposing you to legal reasoning or public policy</p>
+              </div>
+              <div class="track-section">
+                <h4>Graduate Paths</h4>
+                <p>JD (Law School)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tracks-footer">
+          <h3>Which Track is Best for Me?</h3>
+          <p>One of the best ways to learn which career is best for you is through <strong>informational interviews</strong>. Start these conversations while you are still uncertain—through these interviews you can learn a lot about careers and what life looks like in these roles.</p>
+          <blockquote>
+            "We must do more than ask the Lord for excellence. Perspiration must precede inspiration; there must be effort before there is excellence. We must do more than pray for these outcomes at BYU, though we must surely pray. We must take thought. We must make effort. We must be patient. We must be professional. We must be spiritual."
+            <cite>— Spencer W. Kimball, "The Second Century of Brigham Young University"</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats View -->
+    <section id="stats-view" class="view">
+      <div class="stats-container">
+        <div class="stats-overview">
+          <div class="stat-card">
+            <div class="stat-value" id="total-grads">0</div>
+            <div class="stat-label">Graduates with First Job Data</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="total-industries">0</div>
+            <div class="stat-label">Industries</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="total-companies">0</div>
+            <div class="stat-label">Companies</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="total-gradschools">0</div>
+            <div class="stat-label">Grad Schools</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stats-section">
+            <h3>First Job Industry Distribution</h3>
+            <div class="chart-container">
+              <canvas id="industry-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="stats-section">
+            <h3>First Job Industry Distribution (Bar Chart)</h3>
+            <div class="chart-container">
+              <canvas id="industry-bar-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="stats-section">
+            <h3>Top First Employers</h3>
+            <div class="top-list" id="top-companies">
+              <!-- Will be populated dynamically -->
+            </div>
+          </div>
+
+          <div class="stats-section">
+            <h3>Top First Job Locations</h3>
+            <div class="top-list" id="top-locations">
+              <!-- Will be populated dynamically -->
+            </div>
+          </div>
+
+          <div class="stats-section">
+            <h3>Graduate Schools</h3>
+            <div class="top-list" id="top-gradschools">
+              <!-- Will be populated dynamically -->
+            </div>
+          </div>
+
+          <div class="stats-section full-width">
+            <h3>Where BYU Economics Alumni Work (First Job Location)</h3>
+            <div id="alumni-map" class="alumni-map"></div>
+            <div class="map-legend" id="map-legend"></div>
+          </div>
+
+          <div class="stats-section full-width">
+            <h3>Degree Types Pursued</h3>
+            <div class="degree-types" id="degree-types">
+              <!-- Will be populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>BYU Economics Career Explorer - Powered by AI</p>
+    <p class="footer-note">Data based on LinkedIn profiles of BYU Economics graduates</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/data.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

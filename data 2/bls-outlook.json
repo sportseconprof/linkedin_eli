@@ -1,0 +1,236 @@
+{
+  "occupations": [
+    {
+      "title": "Economists",
+      "medianSalary": 115440,
+      "salaryRange": {
+        "low10": 62340,
+        "high10": 212710
+      },
+      "jobGrowth": "1%",
+      "growthDescription": "Slower than average",
+      "annualOpenings": 900,
+      "totalJobs": 17600,
+      "projectionPeriod": "2024-2034",
+      "education": "Master's degree typically required; some government positions accept bachelor's; PhD needed for senior roles",
+      "description": "Economists conduct research, prepare reports, and formulate plans to address economic problems. They study the production and distribution of goods and services, analyze data, and advise businesses and governments on economic policy.",
+      "topIndustries": [
+        "Federal government",
+        "Management, scientific, and technical consulting services",
+        "Research and development in the social sciences"
+      ],
+      "keyDuties": [
+        "Research and analyze economic issues",
+        "Conduct surveys and collect data",
+        "Analyze data using mathematical models and statistical techniques",
+        "Prepare reports, tables, and charts",
+        "Interpret and forecast market trends",
+        "Advise businesses and governments on economic decisions"
+      ],
+      "skills": ["Statistical analysis", "Economic modeling", "Data analysis", "Research methodology", "Policy analysis", "Mathematical modeling"]
+    },
+    {
+      "title": "Financial Analysts",
+      "medianSalary": 101350,
+      "salaryRange": {
+        "low10": 62410,
+        "high10": 180550,
+        "percentile25": 78300,
+        "percentile75": 132050
+      },
+      "jobGrowth": "6%",
+      "growthDescription": "Faster than average",
+      "annualOpenings": 29900,
+      "totalJobs": 368500,
+      "projectionPeriod": "2024-2034",
+      "education": "Bachelor's degree required; MBA or CFA often preferred for advancement",
+      "description": "Financial analysts provide guidance to businesses and individuals making investment decisions. They assess the performance of stocks, bonds, and other investments and help companies make capital allocation decisions.",
+      "topIndustries": [
+        "Securities, commodity contracts, and financial investments",
+        "Credit intermediation and related activities",
+        "Management of companies and enterprises",
+        "Insurance carriers"
+      ],
+      "keyDuties": [
+        "Analyze financial statements and data",
+        "Study economic and business trends",
+        "Evaluate current and historical financial data",
+        "Prepare written reports and recommendations",
+        "Meet with company officials to gain better insight",
+        "Recommend individual investments and investment portfolios"
+      ],
+      "skills": ["Financial modeling", "Valuation", "Excel/VBA", "Bloomberg Terminal", "Financial statement analysis", "Investment analysis"]
+    },
+    {
+      "title": "Data Scientists",
+      "medianSalary": 112590,
+      "salaryRange": {
+        "low10": 63650,
+        "high10": 194410
+      },
+      "jobGrowth": "34%",
+      "growthDescription": "Much faster than average - 4th fastest growing occupation",
+      "annualOpenings": 23400,
+      "totalJobs": 245900,
+      "projectedJobs2034": 328300,
+      "projectionPeriod": "2024-2034",
+      "education": "Bachelor's degree in computer science, mathematics, statistics, or related field; master's degree often preferred",
+      "description": "Data scientists use analytical tools and techniques to extract meaningful insights from data. They develop algorithms, build models, and apply machine learning to solve complex business problems.",
+      "topIndustries": [
+        "Computer systems design and related services",
+        "Management of companies and enterprises",
+        "Scientific research and development services",
+        "Finance and insurance"
+      ],
+      "keyDuties": [
+        "Identify valuable data sources and automate collection processes",
+        "Clean and validate data to ensure accuracy",
+        "Analyze large datasets to find trends and patterns",
+        "Build predictive models and machine learning algorithms",
+        "Present findings to stakeholders using visualizations",
+        "Develop AI and machine learning solutions"
+      ],
+      "growthFactors": [
+        "Growing demand for AI model development",
+        "Increased need for data-driven business decisions",
+        "Expansion of available data volume",
+        "Integration of data applications into business practices"
+      ],
+      "skills": ["Python", "R", "SQL", "Machine Learning", "Statistical modeling", "Data visualization", "TensorFlow/PyTorch", "Big data tools"]
+    },
+    {
+      "title": "Management Analysts (Consultants)",
+      "medianSalary": 101190,
+      "meanSalary": 114710,
+      "jobGrowth": "9%",
+      "growthDescription": "Much faster than average",
+      "annualOpenings": 98100,
+      "totalJobs": 1100000,
+      "projectionPeriod": "2024-2034",
+      "education": "Bachelor's degree required; MBA often preferred; specific certifications like CMC valuable",
+      "description": "Management analysts, often called management consultants, recommend ways to improve an organization's efficiency. They advise managers on how to make organizations more profitable through reduced costs and increased revenues.",
+      "topIndustries": [
+        "Management, scientific, and technical consulting services",
+        "Federal government",
+        "Computer systems design and related services",
+        "Finance and insurance"
+      ],
+      "keyDuties": [
+        "Gather and organize information about problems to be solved",
+        "Interview personnel and conduct on-site observations",
+        "Analyze financial and operational data",
+        "Develop solutions and recommend new systems or changes",
+        "Present findings and recommendations to management",
+        "Help implement recommended changes"
+      ],
+      "workEnvironment": "Most work as consultants on a contractual basis. Frequent travel to client sites required.",
+      "skills": ["Problem-solving", "Analytical thinking", "Communication", "Time management", "Interpersonal skills", "Project management", "Strategic planning"]
+    },
+    {
+      "title": "Market Research Analysts",
+      "medianSalary": 74680,
+      "jobGrowth": "8%",
+      "growthDescription": "Faster than average",
+      "annualOpenings": 94200,
+      "projectionPeriod": "2024-2034",
+      "education": "Bachelor's degree; master's degree may be required for senior positions",
+      "description": "Market research analysts study market conditions to examine potential sales of a product or service. They help companies understand what products people want, who will buy them, and at what price.",
+      "topIndustries": [
+        "Management, scientific, and technical consulting services",
+        "Insurance carriers",
+        "Computer systems design and related services",
+        "Advertising and public relations"
+      ],
+      "skills": ["Market analysis", "Survey design", "Statistical software", "Consumer behavior", "Competitive analysis", "Data visualization"]
+    },
+    {
+      "title": "Investment Banking Analysts",
+      "medianSalary": 100000,
+      "salaryRange": {
+        "baseFirstYear": "85000-110000",
+        "totalCompWithBonus": "140000-200000"
+      },
+      "jobGrowthNote": "Competitive field; varies by market conditions and deal activity",
+      "education": "Bachelor's degree required; top programs and networking essential",
+      "description": "Investment banking analysts help companies raise capital, execute mergers and acquisitions, and provide strategic advisory services. This is an intensive, high-compensation entry point into finance.",
+      "topIndustries": [
+        "Investment banks (bulge bracket and boutique)",
+        "Mergers and acquisitions advisory",
+        "Private equity (exit opportunity)",
+        "Hedge funds (exit opportunity)"
+      ],
+      "keyDuties": [
+        "Build financial models (DCF, LBO, merger models)",
+        "Create pitch books and client presentations",
+        "Conduct due diligence and company research",
+        "Support deal execution and documentation",
+        "Analyze comparable companies and precedent transactions"
+      ],
+      "careerPath": "Analyst (2-3 years) → Associate (3 years) → VP (3 years) → Director/ED → Managing Director",
+      "skills": ["Financial modeling", "DCF analysis", "Excel mastery", "PowerPoint", "Accounting", "Deal execution", "Attention to detail"],
+      "topFirms": ["Goldman Sachs", "Morgan Stanley", "J.P. Morgan", "Piper Sandler", "Jefferies", "Rothschild"]
+    },
+    {
+      "title": "Economic Consultants",
+      "medianSalary": 95000,
+      "salaryRange": {
+        "entryLevel": "70000-90000",
+        "senior": "150000-300000+"
+      },
+      "jobGrowthNote": "Strong demand in litigation support, antitrust, and regulatory matters",
+      "education": "Bachelor's degree minimum; Master's or PhD often required for senior roles",
+      "description": "Economic consultants apply economic theory and quantitative methods to analyze business situations, often for litigation support, antitrust analysis, or regulatory proceedings.",
+      "topIndustries": [
+        "Economic consulting firms",
+        "Law firms",
+        "Government agencies",
+        "Expert witness services"
+      ],
+      "keyDuties": [
+        "Analyze economic data for legal cases",
+        "Conduct econometric analysis",
+        "Prepare expert reports and testimony support",
+        "Research industry and market dynamics",
+        "Quantify damages in litigation"
+      ],
+      "skills": ["Econometrics", "Stata", "R", "SAS", "Economic analysis", "Report writing", "Research methodology"],
+      "topFirms": ["Analysis Group", "Charles River Associates", "Cornerstone Research", "Berkeley Research Group", "Compass Lexecon", "NERA Economic Consulting"]
+    },
+    {
+      "title": "Policy Analysts",
+      "medianSalary": 64030,
+      "jobGrowth": "7%",
+      "growthDescription": "As fast as average",
+      "annualOpenings": 7200,
+      "education": "Bachelor's degree; Master's in Public Policy (MPP) or related field preferred",
+      "description": "Policy analysts research, analyze, and evaluate economic, social, and political issues to provide advice to policymakers, government agencies, and organizations.",
+      "topIndustries": [
+        "Federal government",
+        "State and local government",
+        "Think tanks and research organizations",
+        "Non-profit organizations"
+      ],
+      "skills": ["Policy analysis", "Research methods", "Report writing", "Stakeholder engagement", "Data analysis", "Public speaking"]
+    }
+  ],
+  "generalOutlook": {
+    "summary": "Economics graduates have diverse career options spanning finance, consulting, technology, policy, and academia. The quantitative and analytical skills developed in an economics program are highly valued across industries.",
+    "averageGrowthAllOccupations": "3%",
+    "medianWageAllWorkers": 49500,
+    "growthAreas": [
+      "Data science and analytics (34% growth)",
+      "Management consulting (9% growth)",
+      "Financial analysis (6% growth)",
+      "Fintech and financial technology",
+      "ESG and sustainable finance",
+      "Healthcare economics",
+      "Tech policy and regulation"
+    ],
+    "salaryRange": {
+      "entryLevel": "$55,000 - $90,000",
+      "midCareer": "$90,000 - $150,000",
+      "senior": "$150,000 - $250,000+"
+    }
+  },
+  "lastUpdated": "2024-2025 BLS Data"
+}

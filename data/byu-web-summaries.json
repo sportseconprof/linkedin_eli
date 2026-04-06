@@ -1,0 +1,143 @@
+{
+  "navigatingMajor": {
+    "overview": "The Economics major at BYU is designed to be short and flexible. It has three components: Foundational courses, Core courses, and Elective courses. With forethought, students can finish coursework efficiently and preserve space for preferred electives.",
+    "foundational": [
+      "ECON 110 (3 credits) – Principles of Economics. C- or better required. Prerequisite for all core courses.",
+      "MATH 112 or 113 (4 credits) – Calculus. Required for all core courses.",
+      "ECON 210 (1 credit) – Career Preparation Seminar, ideally in the first semester as a major. Required before ECON 382; can be satisfied by STDEV 317 or 318."
+    ],
+    "coreSequences": {
+      "theory": [
+        "ECON 380 – Intermediate Micro Theory 1",
+        "ECON 381 – Intermediate Macroeconomics (recommends 380)",
+        "ECON 382 – Intermediate Micro Theory 2 (requires 380)"
+      ],
+      "data": [
+        "ECON 378 – Statistics for Economists",
+        "ECON 388 – Econometrics (requires 378)",
+        "ECON 398 – Applied Econometrics (requires 388)"
+      ],
+      "hints": [
+        "A standard path is to take one Theory course and one Data Analysis course in each of the first three semesters in the major.",
+        "Most students prefer a 5-semester sequence; taking three core courses at once is challenging.",
+        "ECON 378, 380, and 388 are prerequisites for most electives; take them early.",
+        "ECON 378, 388, 398, 484, and 588 build data skills; taking them earlier opens more research and job options.",
+        "Working as a TA in ECON 110 requires having ECON 380 and 381 (at least concurrently)."
+      ]
+    }
+  },
+  "econTracks": {
+    "source": "https://economics.byu.edu/econ-tracks",
+    "note": "Full track descriptions, related careers, electives, complements, and software are already represented in the Econ Tracks section of the UI."
+  },
+  "coursesOffered": {
+    "source": "https://economics.byu.edu/list-of-courses-offered",
+    "summary": "The department lists current 100–500 level courses with prerequisites and typical instructors. Core building-blocks are ECON 110, 210, 378, 380, 381, 382, 388, 398 and the 500-level theory/metrics sequence 580, 581, 582, 588. Electives like 420 (Antitrust), 440 (Environmental), 442 (Behavioral), 450 (Financial Economics), 461 (Education), 465 (Health), 475 (Public), 476 (IO), 478 (Game Theory), and 484 (Machine Learning) build specific domain and data skills."
+  },
+  "minorsForMajors": {
+    "source": "https://economics.byu.edu/minors-for-majors",
+    "recommendedMinors": [
+      "Computer Science",
+      "Global Business and Literacy",
+      "International Development",
+      "Languages",
+      "Mathematics",
+      "Political Science",
+      "Strategy"
+    ],
+    "summary": "Minors let Econ majors tailor their education to career goals. The department recommends minors that complement analytic skills (Math, CS, Strategy), global focus (International Development, Global Business and Literacy, Languages), and policy/civic engagement (Political Science)."
+  },
+  "econRoadmaps": {
+    "source": "https://economics.byu.edu/econ-roadmaps",
+    "overview": "Econ Roadmaps are interactive planning tools that help students navigate the major and prepare for life after BYU. Some focus on course planning, others on careers, internships, and graduate school.",
+    "roadmaps": [
+      {
+        "name": "Roadmap 1: Econ Foundation",
+        "when": "Freshman year or when declaring Econ",
+        "objective": "Declare the major and get oriented.",
+        "steps": ["Getting to Know You", "Econ Prerequisites", "Academic Orientation", "Pro Tips for New Majors"]
+      },
+      {
+        "name": "Roadmap 2: Econ Core",
+        "when": "Sophomore year or when starting 300-level core",
+        "objective": "Check off core classes and map electives.",
+        "steps": ["Economics Core Classes", "Meet with Faculty", "Map Your Electives"]
+      },
+      {
+        "name": "Roadmap 3: Graduation Year",
+        "when": "Senior year / second-to-last semester",
+        "objective": "Complete graduation application and leverage campus recruiting tools.",
+        "steps": ["Apply for Graduation", "Campus Recruiting Tools"]
+      },
+      {
+        "name": "Roadmap: Career Prep",
+        "when": "Sophomore year or when creating résumés/cover letters",
+        "objective": "Develop professional documents and presence.",
+        "steps": ["Résumés and Cover Letters", "Professional Online Presence", "Career Services"]
+      },
+      {
+        "name": "Roadmap: Job Search",
+        "when": "When searching for a job or internship",
+        "objective": "Find a job or internship.",
+        "steps": ["Job Search Strategies", "The 2-Hour Job Search", "Networking", "Elevator Pitch", "Interviewing", "Career Services"]
+      },
+      {
+        "name": "Roadmap: Grad School Prep",
+        "when": "Sophomore year or whenever exploring grad school",
+        "objective": "Understand grad school options and preparation steps.",
+        "steps": ["Grad School Options"]
+      }
+    ],
+    "tip": "Students receive custom roadmap links by email and are encouraged to update them at the beginning and end of each semester."
+  },
+  "declareMajorMinor": {
+    "source": "https://economics.byu.edu/declare",
+    "summaryMajor": "Students declare the Economics major via the Change Major Request in MyMAP. After submitting a petition, approvals are processed within about 5 business days, and students receive a YMessage when it is complete. Those with more than 90 BYU credits must meet with the Liberal Arts Advisement Center.",
+    "summaryMinor": "To declare an Economics minor, students visit their primary major’s advisement center. For a second major that includes Economics, students coordinate between the Liberal Arts Advisement Center and the advisement center for the other major.",
+    "advisementCenter": "The Liberal Arts Advisement Center (1041 JFSB, 801-422-3541) is the home advising office for Economics students."
+  },
+  "gradSchoolOtherDisciplines": {
+    "source": "https://economics.byu.edu/after-graduation/graduate-school-in-other-disciplines",
+    "commonFields": [
+      "Computer Science",
+      "Data Analytics / Data Science",
+      "Finance",
+      "Health Care Administration",
+      "International Relations",
+      "Law (JD)",
+      "Mathematics",
+      "MBA",
+      "Medical fields",
+      "MPA",
+      "MPP",
+      "Statistics"
+    ],
+    "applicationTips": [
+      "Get to know professors and become a TA or RA when possible.",
+      "Do internships in organizations and industries aligned with your goals.",
+      "Prepare well in advance for entrance exams (GRE, GMAT, MCAT, LSAT, etc.).",
+      "Be involved on campus and build a strong network using clubs and LinkedIn.",
+      "Volunteer and choose experiences that support your graduate school direction.",
+      "Perform well in key core classes and develop strong writing skills."
+    ],
+    "lettersOfRecommendation": [
+      "Choose professors who know your work and can speak to your critical thinking and communication skills.",
+      "Ask several months in advance and provide a resume plus clear deadlines.",
+      "Explain why graduate school matters to you so letters can be specific and balanced.",
+      "Make the process easy (forms, envelopes if needed) and always send thank-you notes."
+    ],
+    "choosingPrograms": [
+      "Treat grad school as an investment; look beyond rankings to program fit, faculty, and focus.",
+      "Research funding options and do a cost–benefit analysis of tuition vs. outcomes.",
+      "Investigate career services, placement records, and alumni outcomes.",
+      "Consider networking opportunities and the strength of alumni relations.",
+      "Balance your application list across safer, target, and stretch schools."
+    ]
+  },
+  "gradProgramsEcon": {
+    "source": "https://economics.byu.edu/after-graduation/grad-programs",
+    "note": "BYU does not currently offer a graduate program in economics. The page provides detailed information about external PhD programs in economics, including categories like 'Excellent in Most Fields', 'Excellent in Some/Several Fields', and 'Good General Programs', along with self-reported GRE ranges and field strengths.",
+    "advice": "Students interested in PhD economics should prepare early (advanced math and RA experience), carefully research programs and fields, and treat the BYU Grad School Guide plus this list of programs as starting points—not as definitive rankings."
+  }
+}
+
